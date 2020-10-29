@@ -60,12 +60,12 @@
 <table>
     <tr>
         <th>Id</th>
-        <th>Name</th>
+        <th>Next endpoint</th>
     </tr>
-    <c:forEach var="racer" items="${racers}">
+    <c:forEach var="endpoint" items="${endpointInfo}">
         <tr>
-            <td>${racer.id}</td>
-            <td>${racer.name}</td>
+            <td>${endpoint.id}</td>
+            <td>${endpoint.nextEndpoint.id}</td>
         </tr>
     </c:forEach>
 

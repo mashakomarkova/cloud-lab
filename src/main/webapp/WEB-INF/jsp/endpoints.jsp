@@ -59,13 +59,13 @@
 
 <table>
     <tr>
-        <th>Id</th>
-        <th>Name</th>
+        <th>Racer name</th>
+        <th>Racer position</th>
     </tr>
-    <c:forEach var="racer" items="${racers}">
+    <c:forEach var="info" items="${racerInfo}">
         <tr>
-            <td>${racer.id}</td>
-            <td>${racer.name}</td>
+            <td>${info.racer.name}</td>
+            <td>${info.racingPosition}</td>
         </tr>
     </c:forEach>
 

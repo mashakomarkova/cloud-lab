@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Racer {
-
-    private Integer id;
+    private int id;
     private String name;
 }
