@@ -15,4 +15,6 @@ public class Endpoint {
     private LocalDateTime timeFromStart;
     private List<RacerInfo> racerInfos;
     private Endpoint nextEndpoint;
+    private double timeToRest;
+    private double waterSupply;
 }

@@ -10,4 +10,5 @@ public class RacerInfo {
     private Racer racer;
     private int racingPosition;
     private int delay;
+    private int routeLength;
 }

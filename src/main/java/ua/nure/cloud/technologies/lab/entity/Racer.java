@@ -9,4 +9,6 @@ public class Racer {
 
     private Integer id;
     private String name;
+    private String lastName;
+    private int age;
 }
