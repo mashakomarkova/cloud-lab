@@ -55,6 +55,9 @@
     <li><a href="/endpoint/info">Endpoint info</a></li>
     <li><a href="/racer/info2">Racer delay info</a></li>
     <li><a href="/endpoint/info2">Endpoint statistic</a></li>
+    <li><a href="/reduce/info/seasons">Reduce Info Seasons</a></li>
+    <li><a href="/reduce/info/places">Reduce Info Places</a></li>
+    <li><a href="/reduce/info/endpoints">Reduce Info Endpoints</a></li>
 </ul>
 
 <table>

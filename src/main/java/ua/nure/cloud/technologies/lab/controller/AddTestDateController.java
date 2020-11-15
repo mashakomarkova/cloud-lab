@@ -1,4 +1,4 @@
-package ua.nure.cloud.technologies.lab;
+package ua.nure.cloud.technologies.lab.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -38,6 +38,7 @@ public class AddTestDateController {
             racer = new Racer();
             racer.setId(i);
             racer.setName("Racer_" + i);
+            racer.setCountry("Ukraine");
             repository.save(racer);
         }
 
@@ -56,13 +57,25 @@ public class AddTestDateController {
             List<RacerInfo> racerInfoList = new ArrayList<>();
             RacerInfo racerInfo;
 
+            String[] seasons = new String[]{"Season_1", "Season_2", "Season_3", "Season_4", "Season_5"};
+            Random random1 = new Random();
+
             for (int j = 0; j < 100; j++) {
                 racerInfo = new RacerInfo();
                 racerInfo.setId(UUID.randomUUID().toString());
                 Racer tempRacer = repository.findById(j);
                 racerInfo.setRacer(tempRacer);
-                racerInfo.setRacingPosition(random.nextInt(1000));
+                if (j == 1 || j == 2 || j == 3 || j == 4 || j == 5 || j == 6 || j == 7 || j == 8) {
+                    racerInfo.setRacingPosition(j);
+                } else {
+                    int rand = random.nextInt(1000);
+                    while (rand != 1 && rand != 2 && rand != 3 && rand != 4 && rand != 5 && rand != 6 && rand != 7 && rand != 8) {
+                        rand = random.nextInt(1000);
+                    }
+                    racerInfo.setRacingPosition(rand);
+                }
                 racerInfo.setDelay(racerInfo.getRacingPosition() - 1);
+                racerInfo.setSeason(seasons[random1.nextInt(4)]);
                 racerInfoRepository.save(racerInfo);
                 racerInfoList.add(racerInfo);
             }
